@@ -1,0 +1,23 @@
+
+.sl{
+    padding: 10;
+}
+
+.title{
+    color: #404040;
+    font-size: 20;
+    font-weight: bold;
+    margin-top: 10;
+    margin-bottom: 10;
+}
+
+.ptimeAsource{
+    font-size: 12;
+    color: #888;
+    margin-bottom: 15;
+}
+
+.webview{
+    width: 100%;
+    color: #404040;
+}

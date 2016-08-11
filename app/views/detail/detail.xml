@@ -1,0 +1,11 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" actionBarHidden="true">
+
+    <!--<ActivityIndicator busy="true" rowSpan="1" colSpan="1" />-->
+    
+    <StackLayout class="sl">
+        <Label class="title" text="{{ title }}"/>
+        <Label class="ptimeAsource" text="{{ ptimeAsource }}"/>
+        <WebView id="wvid" class="webview" src="{{ body }}" />
+    </StackLayout>
+
+</Page>

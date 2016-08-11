@@ -1,0 +1,24 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns:i="nativescript-image-cache-it" actionBarHidden="true">
+     <!-- 普通ListView -->
+      <!--<ListView id="lvid" class="list" items="{{ groceryList }}">
+        <ListView.itemTemplate>
+          <GridLayout class="gl" columns="68, 10, *" rows="22, *">
+            <Image src="{{ imgsrc }}" col="0" row="0" rowSpan="2"/>
+            <Label class="titleName" text="{{ title }}" col="2" row="0"/>
+            <TextView class="titleDetail" editable="false" text="{{ digest }}" col="2" row="1"/>
+          </GridLayout>
+        </ListView.itemTemplate>
+      </ListView>-->
+      <lv:RadListView id="lvid" class="list" items="{{ groceryList }}" loadOnDemandMode="Auto" loadMoreDataRequested="{{onLoadMoreItemsRequested}}" pullToRefresh="true" pullToRefreshInitiated="{{onPullToRefreshInitiated}}" selectionBehavior="Press" SingleSelection="true" itemSelected="{{onItemSelected}}">
+          <lv:RadListView.itemTemplate>
+              <GridLayout class="gl" columns="68, 10, *" rows="22, *, *">
+                <i:ImageCacheIt imageUri="{{ imgsrc }}" col="0" row="0" rowSpan="2"/>
+                <Label class="titleName" text="{{ title }}" col="2" row="0"/>
+                <Label class="titleDetail" text="{{ digest }}" textWrap="true" col="2" row="1" />
+                <Border marginTop="10" marginLeft="1" marginRight="1" borderWidth="0.25" borderColor="#888" colSpan="3" row="2"></Border>
+              </GridLayout>
+          </lv:RadListView.itemTemplate>
+      </lv:RadListView>
+
+
+</Page>
